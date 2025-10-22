@@ -65,10 +65,11 @@ The models were evaluated using the following metrics:
 The performance of the models on the test set is summarized below.
 
 **Readmission Prediction Results:**
-| Model                | AUC    | F1     | Precision | Recall |
-| -------------------- | ------ | ------ | --------- | ------ |
-| [From your notebook] |        |        |           |        |
-|                      |        |        |           |        |
+| Model                | AUC       | F1    |
+| -------------------- | ------    | -----
+                   
+| LogisticRegression    | 0.710593 |     0.693112 |
+| XGBoost               | 0.955466 |     0.9270   |
 
 **Length of Stay Prediction Results:**
 | Model          | MAE    | R2     |
