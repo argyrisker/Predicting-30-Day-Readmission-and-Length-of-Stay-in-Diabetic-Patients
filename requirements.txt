@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+streamlit
+ucimlrepo
+pandas
+numpy
+scikit-learn
+imbalanced-learn
+xgboost
+torch
+torchvision
+torchaudio
+matplotlib
+seaborn
+tqdm
+shap
+optuna
