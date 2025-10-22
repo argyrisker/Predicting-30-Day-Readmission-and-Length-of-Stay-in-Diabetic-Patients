@@ -11,7 +11,6 @@ This project aims to predict 30-day hospital readmissions for patients with diab
 ├── best_multitask_model.pth
 ├── best_transformer.pth
 ├── DDLS_Enhanced_MemoryOptimized.ipynb
-├── Final_Project_Report.md
 ├── models/
 │   ├── mlp_config.pkl
 │   ├── multitask_mlp_model.pt
