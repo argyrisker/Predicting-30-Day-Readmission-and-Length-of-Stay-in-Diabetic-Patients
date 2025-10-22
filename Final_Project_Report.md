@@ -66,7 +66,7 @@ The performance of the models on the test set is summarized below.
 
 **Readmission Prediction Results:**
 | Model                | AUC       | F1    |
-| -------------------- | ------    | -----
+| -------------------- | ------    | ----- |
                    
 | LogisticRegression    | 0.710593 |     0.693112 |
 | XGBoost               | 0.955466 |     0.9270   |
@@ -77,11 +77,6 @@ The performance of the models on the test set is summarized below.
 | MultiTaskMLP   | [From your notebook] |        |
 | TransformerMTL |        |        |
 
-*(Please run the notebook to generate the latest results and fill in the tables above.)*
-
-The feature importance analysis using SHAP revealed that [mention some of the top features from your SHAP analysis].
-
-*(You can include the SHAP summary plots and other figures from your notebook here.)*
 
 ## 5. Conclusion & Discussion
 
