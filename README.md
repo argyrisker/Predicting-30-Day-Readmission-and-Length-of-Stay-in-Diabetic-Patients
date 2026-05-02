@@ -1,65 +1,95 @@
-# Predicting Hospital Readmission for Diabetic Patients
+# Predicting 30-Day Readmission and Length of Stay in Diabetic Patients
 
-This project aims to predict 30-day hospital readmissions for patients with diabetes using machine learning. The project is based on a large clinical dataset and explores various models to identify high-risk patients.
+This repository contains a machine-learning project for predicting hospital readmission risk and length of stay in diabetic patients.
 
-## Folder Structure
+The project was designed as an applied clinical ML workflow: data preprocessing, feature engineering, model training, evaluation, and lightweight deployment through API and web interfaces.
 
+## Project summary
+
+- **Problem:** Predict 30-day hospital readmission risk and length of stay for diabetic patients.
+- **Domain:** Healthcare AI, clinical prediction modelling, risk stratification.
+- **Data:** Structured clinical dataset of diabetic hospital encounters.
+- **Methods:** Classical machine learning and deep-learning models, including MLP and transformer-based approaches.
+- **Deployment:** FastAPI endpoint, Streamlit application, and simple HTML frontend.
+
+## Why this project matters
+
+Hospital readmission and prolonged length of stay are important healthcare-quality and resource-planning problems. Predictive modelling can help identify high-risk patients earlier, support triage, and guide follow-up planning.
+
+This project is not intended as a clinical product. It is a technical demonstration of a reproducible healthcare-ML pipeline from model development to simple deployment.
+
+## Repository structure
+
+```text
+├── DDLS_Enhanced_MemoryOptimized.ipynb      # Main analysis, preprocessing, model training, evaluation
+├── app_fastapi.py                           # FastAPI application for model serving
+├── app_streamlit.py                         # Streamlit app for interactive use
+├── simple_frontend.html                     # Minimal frontend for API interaction
+├── requirements.txt                         # Python dependencies
+├── best_mlp.pth                             # Saved MLP model weights
+├── best_multitask_model.pth                 # Saved multitask model weights
+├── best_transformer.pth                     # Saved transformer model weights
+└── models/                                  # Preprocessors, model configs, trained model files
 ```
-├── app_fastapi.py
-├── app_streamlit.py
-├── best_mlp.pth
-├── best_multitask_model.pth
-├── best_transformer.pth
-├── DDLS_Enhanced_MemoryOptimized.ipynb
-├── models/
-│   ├── mlp_config.pkl
-│   ├── multitask_mlp_model.pt
-│   ├── scaler.pkl
-│   ├── feature_names.pkl
-│   ├── transformer_config.pkl
-│   └── transformer_model.pt
-├── requirements.txt
-└── simple_frontend.html
+
+## Technical focus
+
+The project demonstrates:
+
+- clinical-data preprocessing,
+- tabular machine learning,
+- deep-learning model development,
+- multitask prediction,
+- model persistence,
+- API deployment with FastAPI,
+- interactive prototyping with Streamlit.
+
+## Reproducibility
+
+Clone the repository:
+
+```bash
+git clone https://github.com/argyrisker/Predicting-30-Day-Readmission-and-Length-of-Stay-in-Diabetic-Patients.git
+cd Predicting-30-Day-Readmission-and-Length-of-Stay-in-Diabetic-Patients
 ```
 
-*   `DDLS_Enhanced_MemoryOptimized.ipynb`: The main Jupyter notebook containing the data analysis, preprocessing, model training, and evaluation.
-*   `app_fastapi.py`: A FastAPI application to serve the trained model as an API.
-*   `app_streamlit.py`: A Streamlit web application to interact with the model.
-*   `simple_frontend.html`: An HTML/JavaScript frontend for the FastAPI application.
-*   `requirements.txt`: A list of Python packages required to run the project.
-*   `best_mlp.pth`, `best_multitask_model.pth`, `best_transformer.pth`: Pre-trained model weights.
-*   `models/`: A directory containing the model and preprocessor files for the Streamlit application.
-*   `Final_Project_Report.md`: The final project report.
+Install dependencies:
 
-## How to Reproduce
+```bash
+pip install -r requirements.txt
+```
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [URL to your repository]
-    cd [repository name]
-    ```
+Run the notebook:
 
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+jupyter notebook DDLS_Enhanced_MemoryOptimized.ipynb
+```
 
-3.  **Run the Jupyter Notebook:**
-    Open and run the `DDLS_Enhanced_MemoryOptimized.ipynb` notebook to perform the data analysis, train the models, and generate the results.
+Run the Streamlit app:
 
-4.  **Run the Web Application:**
-    You can choose to run either the FastAPI or the Streamlit application.
+```bash
+streamlit run app_streamlit.py
+```
 
-    **Option A: FastAPI and HTML Frontend**
-    1.  Start the FastAPI server:
-        ```bash
-        uvicorn app_fastapi:app --reload
-        ```
-    2.  Open the `simple_frontend.html` file in your web browser.
+Run the FastAPI app:
 
-    **Option B: Streamlit Application**
-    1.  Run the Streamlit app:
-        ```bash
-        streamlit run app_streamlit.py
-        ```
-    2.  Open the URL provided by Streamlit in your web browser.
+```bash
+uvicorn app_fastapi:app --reload
+```
+
+## Limitations
+
+- The project is intended for educational and research-portfolio purposes.
+- External validation would be required before any clinical use.
+- Model performance depends on dataset quality, preprocessing choices, and feature availability.
+- Clinical deployment would require calibration, fairness analysis, interpretability, monitoring, and medical review.
+
+## Technical keywords
+
+`healthcare-ai` · `clinical-machine-learning` · `readmission-prediction` · `length-of-stay` · `tabular-deep-learning` · `transformer` · `fastapi` · `streamlit` · `python` · `pytorch`
+
+## Author
+
+**Argyrios Kerezis**  
+Biomedical AI / healthcare machine learning  
+GitHub: [@argyrisker](https://github.com/argyrisker)
